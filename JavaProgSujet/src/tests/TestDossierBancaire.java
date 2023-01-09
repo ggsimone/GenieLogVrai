@@ -22,7 +22,7 @@ public class TestDossierBancaire {
 		DossierBancaire dossier2=new DossierBancaire();
 		dossier2.deposer(1000);
 		dossier2.remunerer();
-		assertEquals(1003.2,dossier.get_solde(),0.0001);
+		assertEquals(1003.2,dossier2.get_solde(),0.0001);
 	}
 
 	
