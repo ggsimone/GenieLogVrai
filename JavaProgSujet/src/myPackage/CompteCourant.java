@@ -12,7 +12,7 @@ public class CompteCourant {
 		_solde += qteC;
 	}
 	
-	public double getSolde() {
+	public double getSolde() {	//amogus
 		return _solde;
 	}
 	
