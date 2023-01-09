@@ -10,7 +10,9 @@ public class DossierBancaire {
 
     public void deposer(double value) {m_solde+=value;}
     public double get_solde() {return m_solde;}
-    public void remunerer() {}
+    public void remunerer() {
+    	m_solde*=1.0032;
+    }
 	
     private double m_solde;
 }
