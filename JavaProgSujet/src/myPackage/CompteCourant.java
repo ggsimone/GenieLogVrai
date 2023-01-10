@@ -16,5 +16,9 @@ public class CompteCourant {
 		return _solde;
 	}
 	
+	public void setSolde(double value) {
+		_solde = value;
+	}
+	
 
 }
