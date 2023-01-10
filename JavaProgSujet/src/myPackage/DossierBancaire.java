@@ -6,6 +6,7 @@ public class DossierBancaire {
 	private CompteEpargne CE;
 	private  double vent_epargne;	//Ventilation epargne, proportion deposee sur le compte epargne par depot
 	private double m_solde;
+	private double _taux;
 	
 	//Constructeur
     public DossierBancaire()
@@ -14,6 +15,7 @@ public class DossierBancaire {
     	CC = new CompteCourant(0);
     	CE = new CompteEpargne(0);
     	m_solde = CC.getSolde() + CE.getSolde();
+    	_taux = 1.0032;
     	
     	
     }
@@ -25,7 +27,7 @@ public class DossierBancaire {
     }
     public double get_solde() {return m_solde;}
     public void remunerer() {
-    	CE.setSolde(CE.getSolde()*1.0032);
+    	CE.setSolde(CE.getSolde()*_taux);
     }
 	
     
