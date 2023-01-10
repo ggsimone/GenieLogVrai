@@ -1,25 +1,34 @@
 package tests;
 
 import static org.junit.Assert.*;
-import myPackage.DossierBancaire;
+
+import org.junit.After;
+import org.junit.Before;
+
+import myPackage.CompteEpargne;
+
 
 import org.junit.Test;
 
 //The Test annotation indicates that the public void method to which it is attached can be run as a test case.
 public class TestCompteEpargne {
 
-	@Test  
-	public void test1_1() 
-	{
-		DossierBancaire dossier=new DossierBancaire();
-		dossier.deposer(100);
-		assertEquals(100,dossier.get_solde(),0); //voir documentation en ligne sur assertions Junit 
+	
+	@Before
+	public void setUp() throws Exception {
 	}
 
-	@Test
-	public void test1_2() 
-	{
-		//fail("Test1_2 Not yet implemented");
+	@After
+	public void tearDown() throws Exception {
 	}
+	
+	
+	@Test  
+	public void testCompteEpargne() 
+	{
+		CompteEpargne CE=new CompteEpargne(50);
+		assertEquals(50,CE.getSolde(),0);
+	}
+
 
 }
