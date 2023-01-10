@@ -23,17 +23,19 @@ public class TestCompteCourant {
 	
 	
 	@Test  
-	public void test1_1() 
+	public void testConstructeur() 
 	{
 		CompteCourant Ccourant=new CompteCourant(50);
-		
 		assertEquals(50,Ccourant.getSolde(),0); //voir documentation en ligne sur assertions Junit 
 	}
 
 	@Test
-	public void test1_2() 
+	public void testRemunerer() 
 	{
-		//fail("Test1_2 Not yet implemented");
+		CompteCourant Ccourant=new CompteCourant(50);
+		Ccourant.setSolde(Ccourant.getSolde()*5);
+		assertEquals(250,Ccourant.getSolde(),0);
 	}
+	
 
 }
