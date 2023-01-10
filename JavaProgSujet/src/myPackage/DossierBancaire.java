@@ -30,5 +30,5 @@ public class DossierBancaire {
     	CE.setSolde(CE.getSolde()*_taux);
     }
 	
-    
+    //Ajout commentaire partie 4
 }
