@@ -20,7 +20,7 @@ public class TestCompteCourant {
 	public void tearDown() throws Exception {
 	}
 	
-	
+	//Ces tests sont bien fonctionnels
 	
 	@Test  
 	public void testConstructeur() 

@@ -17,7 +17,7 @@ public class DossierBancaire {
     	m_solde = CC.getSolde() + CE.getSolde();
     	_taux = 1.0032;
     	
-    	
+    	// je trouve que ce constructeur est un peu lourd mais il est bien
     }
 
     public void deposer(double value) {
