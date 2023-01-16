@@ -20,15 +20,35 @@ public class DossierBancaire {
     	// je trouve que ce constructeur est un peu lourd mais il est bien
     }
 
+    
     public void deposer(double value) {
     	CC.depotCompte(value*(1-vent_epargne));
     	CE.depotCompte(value*vent_epargne);
-    	m_solde+=CC.getSolde() + CE.getSolde();		//ca au lieu de +=value pour si jamais y a un soucis pendant les depots
+    	m_solde=CC.getSolde() + CE.getSolde();		//ca au lieu de +=value pour si jamais y a un soucis pendant les depots
     }
+    
+    
     public double get_solde() {return m_solde;}
+    
+    
     public void remunerer() {
     	CE.setSolde(CE.getSolde()*_taux);
+    	m_solde=CC.getSolde() + CE.getSolde();
     }
 	
+    
     //Ajout commentaire partie 4
+    
+    
+    
+    public void retirer(double value) {
+    		if(value > CC.getSolde()) {
+    			throw new ArithmeticException("Solde insuffisant");
+    		}
+    		else {
+    			CC.setSolde(CC.getSolde()-value);
+    			m_solde=CC.getSolde() + CE.getSolde();
+    		}  		
+
+    }
 }

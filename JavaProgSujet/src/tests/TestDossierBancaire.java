@@ -35,7 +35,34 @@ public class TestDossierBancaire {
 		DossierBancaire dossier2=new DossierBancaire();
 		dossier2.deposer(1000);
 		dossier2.remunerer();
-		assertEquals(1003.2,dossier2.get_solde(),0.0001);
+		assertEquals(1001.92,dossier2.get_solde(),0.0001);	//car Compte epargne = 60% du dossier, 3.2%*600 = 1.92
+	}
+	
+	@Test
+	public void test_retrait() {
+		DossierBancaire dossier3=new DossierBancaire();
+		dossier3.deposer(1000);
+		dossier3.retirer(200);
+		assertEquals(800,dossier3.get_solde(),0.0001);
+		
+	}
+	
+	
+	@Test
+	public void test_retrait_fail() {
+		boolean thrown = false;
+		DossierBancaire dossier4=new DossierBancaire();
+		dossier4.deposer(1000);
+		
+		try {
+			dossier4.retirer(500);
+			//fail("Pas d'exception levée");
+		}
+		catch(Exception e) {
+			thrown = true;
+		}
+		assertTrue(thrown);
+			
 	}
 
 	
