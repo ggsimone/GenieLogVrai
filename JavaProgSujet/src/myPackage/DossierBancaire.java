@@ -31,7 +31,7 @@ public class DossierBancaire {
     public double get_solde() {return m_solde;}
     
     
-    public void remunerer() {
+    public void remunerer() {						//cette fonction destinée au banquier permet de rémunérer le dossier du client.
     	CE.setSolde(CE.getSolde()*_taux);
     	m_solde=CC.getSolde() + CE.getSolde();
     }
